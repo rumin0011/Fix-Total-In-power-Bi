@@ -1,0 +1,27 @@
+Two Column Fix Total
+--Product Table A Product[Category] & Product[Product] A Opur Min sales
+--then Formula
+
+Multiple Column A Min Sales = 
+SUMX(
+    SUMMARIZE(
+        'Product' , 
+        'Product'[Category] ,
+        'Product'[Product]
+        ) , 
+        CALCULATE( MIN(Sales[Sales]))
+    )
+
+Exam-2
+--Sales Table A Calender[Year] & Product[Category] A Opur Max sold Per Day
+--then Formula
+
+Max Sold per Day = 
+SUMX(
+    SUMMARIZE(
+        Sales , 
+        Calender[Year] , 
+        'Product'[Category]
+    ),
+    [Max sold per day]
+)
