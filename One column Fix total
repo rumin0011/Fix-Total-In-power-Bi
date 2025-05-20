@@ -1,6 +1,7 @@
 >> One Column Fix Total 
 --For Example Product Table A Product Column
-Then
+--Then Formula
+--Ex-1
   Max Product Sales =
   Sumx(
       Values(Product[Product]) ,
@@ -8,7 +9,8 @@ Then
 )
 
 --For Example Sales Table A Channel Column
-Then
+--Then Formula
+--Ex-2
   SUMX( 
       VALUES(Sales[Channel]) ,
       CALCULATE(
