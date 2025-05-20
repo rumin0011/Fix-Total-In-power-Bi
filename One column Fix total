@@ -1,0 +1,17 @@
+>> One Column Fix Total 
+--For Example Product Table A Product Column
+Then
+  Max Product Sales =
+  Sumx(
+      Values(Product[Product]) ,
+      Calculate(Max(Sales[Sales]))
+)
+
+--For Example Sales Table A Channel Column
+Then
+  SUMX( 
+      VALUES(Sales[Channel]) ,
+      CALCULATE(
+          DISTINCTCOUNT(Sales[Date])
+      )
+  )
